@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitten in Dogsland</title>
+    <link rel="shortcut icon" type="x-" href="./assets/img/tab-logo.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" type="module" defer></script>
+    <script src="./assets/js/howler.min.js"></script>
+
+</head>
+
+<body>
+    <!--=========== GAME CONTAINER ==========-->
+    <div class="main-container">
+        <div class="game-container">
+            <!--======= LIFE AND MAP ============-->
+            <div class="life-map-container">
+
+
+                <!--======== LIFE CONTAINER ==========-->
+                <div class="life-bar">
+                    <div class="life-bar-color"></div>
+                </div>
+
+                <!--======== BOTTLE DISPLAY CONTAINER ==========-->
+                <div class="bottle-display-container">
+
+                </div>
+
+                <!--============== MAP CONTAINER ============-->
+                <div class="map-position-container">
+                    <div class="map-position-pointer"></div>
+                    <div class="map-position">
+                    </div>
+                </div>
+
+
+            </div>
+            <!--============= footer =============-->
+            <footer></footer>
+            <!--============ PLAYER AND OTHER ELEMENTS =======-->
+            <div class="mountains"></div>
+
+            <div class="next-level">
+                <h1 class="next-level-btn">Próximo nível</h1>
+            </div>
+        </div>
+
+        <!--=========== CHARACTER ===========-->
+        <div class="character"></div>
+
+        <div class="level-ending-flag"><span></span></div>
+
+        <div class="main-container-left-strip"></div>
+
+        <!--=========== MENU CONTAINER ===========-->
+        <div class="menu-screen">
+            <h1 class="main-h1">Kitten in <span>Dogsland</span></h1>
+            <div class="menu-options">
+                <h2 id="start">Novo jogo</h2>
+                <h2 id="sobre">Sobre</h2>
+            </div>
+        </div>
+
+        <div class="sobre-screen">
+            <h1 class="sobre-screen-h1-1">Sobre este jogo</h1>
+            <p>Criei este game com intuito de exercitar meus conhecimentos em JavaScript, aproximadamente 7 meses de
+                estudo até esta postagem(07/22), mas também é feito o uso de HTML, CSS e uma biblioteca (howl.js) para
+                sons. A interação, movimentos e cenário é quase que inteiramente JavaScript, sem uso de animações
+                previamente feitas. Como o foco era apenas desenvolver o game e sua funcionalidade, não foquei muito em
+                estilo e fiz apenas dois níveis, os gifs de personagem e inimigos, obtive pela internet, e não possuo
+                direito sobre eles.</p>
+            <h3>Confira outros projetos e games em meu GitHub: <a class="link"
+                    href="https://github.com/WelerM?tab=repositories" target="_blank">https://github.com/WelerM</a></h3>
+            <h1 class="sobre-screen-h1-2">Voltar</h1>
+        </div>
+
+
+        <!--============== TUTORIAL ======================  -->
+        <div class="buttons-tutorial">
+            <h1>Tutorial</h1>
+            <img src="./assets/img/key.png" alt="">
+            <div class="h2-container">
+                <h2>espaço para <span>pular</span></h2>
+                <h2>setas <span>esquerda</span> e <span>direita</span> para movimentar</h2>
+            </div>
+            <button class="tutorial-btn-start">
+                Começar
+            </button>
+        </div>
+
+        <!--========= ending ============-->
+        <div class="ending-container">
+            <p id="end-line1"></p><br>
+            <p id="end-line2"></p><br>
+            <p id="end-line3"></p><br>
+            <p id="end-line4"></p><br>
+        </div>
+        <div class="end-screen">
+            <h1>Fim</h1>
+            <button id="restart">Jogar novamente</button>
+        </div>
+
+    </div>
+
+    <!--=========== GAME OVER CONTAINER =====-->
+    <div class="game-over">
+        <h2>GAME OVER!</h1>
+            <button id="btn-new-game">Jogar novamente</button>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

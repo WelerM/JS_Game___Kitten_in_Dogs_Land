@@ -1,0 +1,696 @@
+body {
+    margin: 0;
+    background: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    
+} 
+
+.main-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 650px;
+}
+.main-container-left-strip{
+    height: 700px;
+    width: 400px;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: -400px;
+}
+.main-container:after{
+    content: '';
+    display: block;
+    height: 700px;
+    width: 329px;
+    background: black;
+    position: absolute;
+    top: 0px;
+    right: -330px;
+}
+.game-container{
+    background: linear-gradient(blue, rgb(171, 171, 225));
+      width: 1000px;
+    height: 600px;
+  
+}
+.game-container2{
+    width: 1000px;
+    height: 600px;
+    background: linear-gradient( black,purple);
+}
+/*========CHARACTER========*/
+.character {
+    position: absolute;
+    
+    bottom: 35px;
+    width: 120px;
+    height: 120px; 
+    background: url('../img/cat.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120px 90px;
+    display: none;
+    z-index: 1;
+}
+.character-flipped{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.character-jumping{
+    width: 120px;
+    height: 120px;
+    background: url('../img/cat-jumping.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120px 90px;
+}
+footer {
+    width: 1000px;
+    height: 80px;
+    background: linear-gradient(green, brown);
+    bottom: 0px;
+    position: absolute;
+    border-top: 1px solid;
+}
+.level-ending-flag{
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    bottom: 100px;
+    right: -60px;
+    border-bottom: 30px solid transparent;
+    border-top: 30px solid transparent;
+    border-right: transparent;
+    border-left: 50px solid red;
+}
+.level-ending-flag > span{
+    color: white;
+    position: absolute;
+    right: 29px;
+    top: -13px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.level-ending-flag::before{
+    content: '';
+    display: block;
+    height: 100px;
+    width: 10px;
+    background: black;
+    position: absolute;
+    right: 50px;
+    top: -29px;
+}
+.next-level{
+    width: 400px;
+    height: 160px;
+    border-radius: 10px;
+    background: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    
+}
+.next-level-btn{
+    font-size: 45px;
+    margin: 0;
+    color: white;
+    margin: auto;
+    padding: 0;
+    margin-top: 50px;
+    text-align: center;
+    text-shadow: none;
+    font-family: cursive;
+}
+.next-level>h1:hover{
+    cursor: pointer;
+    font-size: 46px;
+}
+/*============ MENU ============*/
+.menu-screen{
+    width: 1000px;
+    height: 650px;
+    position: absolute;
+    background: '';
+    top: 0;
+    text-align: center;
+}
+h1{
+
+
+    text-shadow: -5px 5px 0px #00e6e6, -10px 10px 0px #01cccc, -15px 15px 0px #00bdbd;
+    color: #ffffff;
+  
+    font-size: 90px;
+}
+span{
+    
+}
+.menu-options{
+    width: 330px;
+    height: 230px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+    text-shadow: -5px 5px 0px #00e6e6, -10px 10px 0px #01cccc, -10px 10px 0px #00bdbd;
+
+}
+#start{
+    font-family: cursive;
+    font-size: 45px;
+    margin-bottom: -20px;
+}
+#start:hover{
+    cursor: pointer;
+    color: rgb(219, 219, 255);
+    position: relative;
+    bottom: 5px;
+    font-size: 49px;
+}
+#sobre{
+    font-family: cursive;
+    font-size: 45px;
+    margin-bottom: -20px;
+}
+
+#sobre:hover{
+    cursor: pointer;
+    color: rgb(219, 219, 255);
+    position: relative;
+    bottom: 5px;
+    font-size: 49px;    
+}
+.sobre-screen{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: purple;
+    text-align: center;
+    display: none;
+}
+.sobre-screen-h1-1{
+    font-size: 70px;
+}
+.sobre-screen > p{
+    width: 90%;
+    height: 300px;
+    color: wheat;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: cursive;
+    letter-spacing: 1px;
+    text-align:justify;
+    margin: auto;
+
+
+}
+    
+h3{
+    margin-top: -60px;
+    color: wheat;
+}
+.link{
+    color: rgb(137, 208, 250);
+}
+.sobre-screen-h1-2{
+    font-size: 60px;
+    margin: 0;
+
+}
+.sobre-screen-h1-2:hover{
+    font-size: 62px;
+    cursor: pointer;
+    position: relative;
+    bottom: -5px;
+    
+
+}
+.menu-screen > img{
+    position: absolute;
+    margin-left: -500px;
+    bottom: 0;
+    width: 600px;
+    height: 400px;
+}
+
+.life-map-container{
+    height: 60px;
+    width: 900px;
+    margin: auto;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding-top: 20px ;
+    display: none;
+}
+.life-bar{
+    width: 250px;
+    height: 30px;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 30px;
+    font-size: 19px;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    border-radius: 10px;
+ 
+
+}
+.life-bar-color{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: red;
+}
+.bottle-display-container{
+    display: flex;
+    align-items: center;
+
+    width: 150px;
+    margin-left: 20px;
+    height: 100%;
+    gap: 5px;
+}
+.health-bottle{
+    width: 40px;
+    height: 35px;
+    user-select: none;
+}
+
+
+.map-position-container{
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    
+}
+.map-position{
+    content: '';
+    display: block;
+    height: 6px;
+    width: 300px;
+    background-color: black;
+    border: 1px solid white;
+    margin-top: 18px;
+    position: absolute
+}
+.map-position-pointer{
+    content: '';
+    display: block;
+    height: 10px;
+    width: 0px;
+    border: 20px solid red;
+    border-bottom: 0px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    margin-top: 10px;
+    margin-bottom:-25px;
+    position: relative;
+}
+.tiroJog{
+    width: 6px;
+    height: 6px;
+    background: black;
+    position: absolute;
+    margin-left: 260px;
+}
+/*===================== ENEMY ======================*/
+.enemyClass {
+    width: 110px;
+    height:110px;
+    background: url(../img/pug.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px 200px;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.011);
+    border-radius: 39%;
+    position: absolute;
+    bottom: 40px;
+    right:0px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    z-index: 1
+}
+.enemyClass2 {
+    width: 170px;
+    height:110px;
+    background: url(../img/dog.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 190px 150px;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.011);
+    border-radius: 39%;
+    position: absolute;
+    bottom: 40px;
+    right:-500px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    z-index: 1
+}
+/*=================== BLOOD REGENERATION ==========*/
+.blood-regen{
+    position: absolute;
+    top: 300px;
+    right: 50px;
+    width: 55px;
+    height: 60px;
+    background: url(../img/life.png);
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    
+}
+/*===================== BACKGROUND ==================*/    
+.cloud{
+    width: 100px;
+    height: 100px;
+    background: url(../img/cloud.png);
+    opacity: 0.7;
+    position: absolute;
+    bottom: 400px;
+    right: -150px;
+}
+
+.game-over{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 220px;
+    border-radius: 10px;
+    font-size: 10px;
+    background: blue;
+    text-align: center;
+    color: rgba(255, 0, 0, 0.795);
+    font-family: cursive;
+    display: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+}
+.game-over > h2 {
+    font-size: 40px;
+    font-family: cursive;
+}
+.game-over > button{
+    font-size: 27px;
+    margin-top: 10px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background:rgb(78, 78, 250);
+    color: white;
+    width: 280px;
+    font-family: cursive;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.37);
+}
+.game-over > button:hover{
+    cursor: pointer;
+    background: rgb(92, 92, 255);
+    font-size: 28px;
+}
+.intro-container{
+    width: 100%;
+    height: 569px;
+    position: absolute;
+    top: 0;
+    display:none;
+
+}
+.txt-box1{
+    width: 400px;
+    height: 210px;
+    background: black;
+    position: absolute;
+    top: 250px;
+    left: 220px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: block;
+}
+.txt-box1 > *{
+    color: rgba(255, 255, 255, 0.529);
+    letter-spacing: 1px;
+    font-size: 19px;
+    margin: 0;
+    font-family: cursive;
+}
+.txt-box2{
+    width: 450px;
+    height: 230px;
+    background: black;
+    position: absolute;
+    top: 250px;
+    left: 220px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: none;
+}
+.txt-box2 > * {
+    color: rgba(255, 255, 255, 0.529);
+    letter-spacing: 1px;
+    font-size: 19px;
+    margin: 0;
+    font-family: cursive;
+}
+.intro-cat1{
+    width: 110px;
+    position: absolute;
+    bottom: -25px;
+    left: 70px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.intro-cat2{
+    width: 85px;
+    height: 100px;
+    position: absolute;
+    bottom: -26px;
+    left: 160px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.barbara-end{
+    width: 85px;
+    height: 100px;
+    position: absolute;
+    bottom: 56px;
+    right: -90px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.barbara-flipped{
+    width: 85px;
+    height: 100px;
+    position: absolute;
+    bottom: -26px;
+    left: 160px;
+}
+.barbara-caught{
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    transform: rotate(35deg);
+    bottom: 15px;
+
+
+}
+.exclamation{
+    position: absolute;
+    bottom: 90px;
+    left: 140px;
+    display: none;
+}
+.boss{
+    position: absolute;
+    right: -350px;
+    bottom: -50px;
+    width: 250px;
+    height: 160px;
+    background-size: 220px 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.boss-flipped{
+    position: absolute;
+    right: -350px;
+    bottom: -50px;
+    width: 250px;
+    height: 160px;
+    background-size: 220px 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+}
+.mountains{
+    position: absolute;
+    right: -250px;
+    bottom: 81px;
+    height: 90px;
+    width: 240px;
+    background: linear-gradient(rgb(181, 180, 180), green);    ;
+    border-radius: 90px 90px 0px 0px;
+
+}
+
+
+.mountains:after{
+    content: '';
+    display: block;
+    height: 30px;
+    width: 70px;
+    background: linear-gradient(white, rgb(181, 180, 180) );
+    border-radius: 50px 50px 0px 0px;
+    position: relative;
+    bottom: 28px;
+    left: 100px;
+
+}
+
+/*============== TUTORIAL ===============*/
+.buttons-tutorial{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(blue, rgb(108, 108, 255));
+    top: 0px;
+    display: none;
+}
+.buttons-tutorial > h1{
+    margin: auto;               
+    width: 300px;
+    margin-top: 20px;
+}
+.buttons-tutorial > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.542);
+}
+.h2-container{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 120%);
+    display: flex;
+    gap: 50px;
+    padding-left: 30px;
+}
+
+.h2-container > h2{
+    color: white;
+    font-size: 25px;
+}
+.h2-container > h2:before{
+    content: '';
+    display: block;
+    width: 8px;
+    height: 60px;
+    background:  rgba(255, 0, 0, 0.729);
+    margin: 0;
+    margin-top: -20px;
+    margin-left: 263px;
+    transform: rotate(35deg);
+}
+
+.h2-container > h2> span{
+    color: rgba(255, 0, 0, 0.545);
+    font-weight: bold;
+    font-size: 29px;
+}
+.tutorial-btn-start{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 590%);
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    background: blue;
+    border: none;
+    color: white;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 19px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.692);
+    cursor: pointer;
+}
+.tutorial-btn-start-animation{
+    cursor: pointer;
+    font-size: 20px;
+    background: rgb(47, 47, 238);
+}
+.ending-container{
+    width: 500px;
+    height: 190px;
+    background-color: black;
+    position: absolute;
+    top: 230px;
+    right: 200px;
+    border-radius: 5px;
+    display: none;
+    padding: 20px;
+}
+.ending-container >  *{
+    color: rgba(255, 255, 255, 0.529);
+    letter-spacing: 1px;
+    font-size: 19px;
+    margin: 0;
+    font-family: cursive;
+}
+.end-screen{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: black;
+    top: 0px;
+    display: none;
+
+}
+.end-screen > h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -110%);
+}
+#restart{
+    height: 60px;
+    width: 400px;
+    background: black;
+    color: white;
+    border: none;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 180%);
+    font-family: cursive;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 10px;
+
+}
+#restart:hover{
+    cursor: pointer;
+    font-size: 32px;
+
+}
