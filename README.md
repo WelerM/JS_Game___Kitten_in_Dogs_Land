@@ -13,3 +13,8 @@ A 2D like game made with raw javascript, html and css. I made this project to ex
 https://welerm.github.io/JS_Game___Kitten_in_Dogs_Land/
 
 
+
+Check my other js game:
+https://github.com/WelerM/JS_Game___Rock-catch
+
+
